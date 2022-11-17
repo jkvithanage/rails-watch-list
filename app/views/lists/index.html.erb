@@ -1,15 +1,19 @@
+<div class="container-fluid banner">
+  <h1>Save your favourite movies</h1>
+</div>
 <div class="container mt-3">
-  <h1>My lists</h1>
+  <h2>My lists</h2>
   <ul class="list-group">
     <% @lists.each do |list| %>
       <%= link_to list.name, list_path(list), class: "list-group-item list-group-item-action py-3" %>
     <% end %>
   </ul>
+  <hr>
 </div>
 <div class="container  mt-3">
+  <h2>Create a new list</h2>
   <div class="card">
     <div class="card-body">
-      <h2>Create a new list</h2>
       <%= simple_form_for @list do |f| %>
         <%= f.input :name %>
         <%= f.button :submit, class: "btn btn-primary"  %>
