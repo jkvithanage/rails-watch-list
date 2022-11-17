@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   end
   resources :bookmarks, only: [:destroy]
 
-  root "lists#index"
+  root 'lists#index'
 end
